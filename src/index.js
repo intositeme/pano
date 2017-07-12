@@ -57,7 +57,8 @@ class Page {
       throw new Error('No jQuery pattern for panorama container provided.')
     }
     this.panos = []
-    this.elements = document.getElementsByTagName("pano")
+    // this.elements = document.getElementsByTagName("pano")
+    this.elements = containers
     for(let i = 0; i < this.elements.length; i++) {
       this.panos.push(new Element(this.elements[i]))
     }
